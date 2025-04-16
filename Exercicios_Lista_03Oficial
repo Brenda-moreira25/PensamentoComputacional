@@ -1,0 +1,766 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyP7XdJxh3Q5UR84yTs+aXT3",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Brenda-moreira25/PensamentoComputacional/blob/main/Exercicios_Lista_03Oficial\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "##Exercicios de aprendizagem lista 03"
+      ],
+      "metadata": {
+        "id": "h8eig-6Yhz3R"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "1.Transcreva o teste de mesa no algoritmo a seguir:\n",
+        "\n",
+        "```Python\n",
+        "\n",
+        "Exercicios para testar aprendizagem do mes de abril, nas aulas do professor Guilherme.\n",
+        "\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "S45LMv4Bi761"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "oueeo_NPe0SJ",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "016e4c54-d1cc-4d1c-f57e-4e7de14e0b35"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1  x 9 = 9\n",
+            "2  x 9 = 18\n",
+            "3  x 9 = 27\n",
+            "4  x 9 = 36\n",
+            "5  x 9 = 45\n",
+            "6  x 9 = 54\n",
+            "7  x 9 = 63\n",
+            "8  x 9 = 72\n",
+            "9  x 9 = 81\n",
+            "10  x 9 = 90\n"
+          ]
+        }
+      ],
+      "source": [
+        "#Algoritmo tabuada_9;\n",
+        "\n",
+        "#vars\n",
+        "x = 0\n",
+        "R = 0\n",
+        "\n",
+        "#calculo\n",
+        "\n",
+        "for x in range(1,11):\n",
+        " R = 9 * x\n",
+        " print( x, \" x 9 =\", R)"
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "2. Faça um programa em Python que mostre todos os números inteiros ímpares situados na faixa\n",
+        "de 1000 a 1010.\n",
+        "\n",
+        "``` python\n",
+        "\n",
+        "\n",
+        "```"
+      ],
+      "metadata": {
+        "id": "-ZxFT_5wnAEZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Algortimo para números inteiros:\n",
+        "\n",
+        "#calculo\n",
+        "for x in range(1000,1051):\n",
+        " if  x % 2 == 1:\n",
+        "    print( x )"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "OjDintlxnAdv",
+        "outputId": "261c220c-eb40-484f-f585-07cd643a7e8b"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1001\n",
+            "1003\n",
+            "1005\n",
+            "1007\n",
+            "1009\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "3. Elabore um programa em Python que calcule e escreva a soma de 10 números lidos."
+      ],
+      "metadata": {
+        "id": "Xi1viA8BuGbd"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Algoritmo soma de dez números!\n",
+        "\n",
+        "#calculo\n",
+        "int(input(\"informe um número para somar com: \"))\n",
+        "\n",
+        "for x in range(1,11):\n",
+        "   x = x + y\n",
+        "   soma = x\n",
+        "\n",
+        "print(\"a soma será \", soma)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Q0NriKuPuJV0",
+        "outputId": "cadd91d2-20c2-42cd-c222-5eae50fa34e1"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "informe um número para somar com: 1\n",
+            "a soma será  20\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "4. Faça um programa em Python que leia a nota de 10 alunos de uma turma. Ao final, deve ser\n",
+        "escrita a média geral da turma."
+      ],
+      "metadata": {
+        "id": "XjzJN-vk2Zwu"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Algoritmo repetição_soma_dos_números\n",
+        "\n",
+        "for i in range(1,11):\n",
+        "\n",
+        "  int(input(\"NOTA: \"))\n",
+        "  m = i / 10\n",
+        "  print(i)\n",
+        "\n",
+        "print(\"A média da nota de dez alunos será: \", m)"
+      ],
+      "metadata": {
+        "id": "8sVvJKRk2cEF",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "30c753bf-f730-4c37-e6b4-8368b10cb726"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "NOTA: 1\n",
+            "1\n",
+            "NOTA: 1\n",
+            "2\n",
+            "NOTA: 1\n",
+            "3\n",
+            "NOTA: 1\n",
+            "4\n",
+            "A média da nota de dez alunos será:  0.4\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "5. Faça um programa em Python que leia 5 números. Para cada número fornecido, escreva se\n",
+        "ele é NULO, NEGATIVO ou POSITIVO."
+      ],
+      "metadata": {
+        "id": "opvgUcfv3wWV"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Algoritmo ler sequencia de cinco números:\n",
+        "\n",
+        "#identifique os numeros\n",
+        "\n",
+        "for i in range(1,6):\n",
+        " i = float(input(\"ESCREVA UM NÚMERO: \"))\n",
+        "\n",
+        " if i > 0:\n",
+        "  print(\"Esse número é POSITIVO\")\n",
+        "\n",
+        " elif i == 0:\n",
+        "  print(\"Esse número é NULO\")\n",
+        "\n",
+        " else:\n",
+        "  print(\"Esse número é negativo\")"
+      ],
+      "metadata": {
+        "id": "lWUo2j-j3xDs"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [],
+      "metadata": {
+        "id": "sHxe6AE6lro3"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "6. Ler dois valores inteiros e escrever os números em sequência do menor até maior valor."
+      ],
+      "metadata": {
+        "id": "bCFt46ge8hrh"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Algoritmo sequencia de valores!\n",
+        "\n",
+        "#identificação dos números\n",
+        "\n",
+        "x = int(input(\"Informe o menor valor: \"))\n",
+        "y = int(input(\"Informe o maior valor: \"))\n",
+        "\n",
+        "if x > y:\n",
+        "  print(x, \" é maior que \", y)\n",
+        "elif x == y:\n",
+        "  print(x, \" e \", y ,\" são iguais\")\n",
+        "else:\n",
+        "  print(y, \" é maior que \", x)\n",
+        "\n",
+        "for i in range(x,y):\n",
+        "  print(i)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "0pB25F098kCh",
+        "outputId": "99ee5173-5b17-4b2e-b79b-55b576c2e868"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Informe o menor valor: 20\n",
+            "Informe o maior valor: 30\n",
+            "30  é maior que  20\n",
+            "20\n",
+            "21\n",
+            "22\n",
+            "23\n",
+            "24\n",
+            "25\n",
+            "26\n",
+            "27\n",
+            "28\n",
+            "29\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "7. Faça um programa em Python que escreva os números pares entre 100 e 200."
+      ],
+      "metadata": {
+        "id": "jKPhHYAw8_mS"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Algoritmo números pares!\n",
+        "\n",
+        "#inicio\n",
+        "\n",
+        "for i in range(100,110):\n",
+        " if i % 2 == 0:\n",
+        "  print(i)"
+      ],
+      "metadata": {
+        "id": "7iTj6ycW_gph",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "d0bdfdd9-84e8-49b4-e71b-3964ac5242fa"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "100\n",
+            "102\n",
+            "104\n",
+            "106\n",
+            "108\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "8. Escrever um programa em Python que leia um valor para n, inteiro e positivo, e escreva a\n",
+        "tabuada de n. Com os respectivos valores."
+      ],
+      "metadata": {
+        "id": "Y9njyaBrAO_L"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Algoritmo ler valor para n!\n",
+        "n = 0\n",
+        "x = 0\n",
+        "R = 0\n",
+        "n = 0\n",
+        "\n",
+        "#inicio\n",
+        "\n",
+        "n = int(input(\"Informe um número para gerar a tabuada: \"))\n",
+        "\n",
+        "#calculo\n",
+        "\n",
+        "for x in range(1,11):\n",
+        " R = n * x\n",
+        " print(n, \" x\", x, \"=\", R)"
+      ],
+      "metadata": {
+        "id": "4d13xCZ9AQ0a",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "1da28fdc-119f-476d-f300-7b6984ea57c4"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Informe um número para gerar a tabuada: 6\n",
+            "6  x 1 = 6\n",
+            "6  x 2 = 12\n",
+            "6  x 3 = 18\n",
+            "6  x 4 = 24\n",
+            "6  x 5 = 30\n",
+            "6  x 6 = 36\n",
+            "6  x 7 = 42\n",
+            "6  x 8 = 48\n",
+            "6  x 9 = 54\n",
+            "6  x 10 = 60\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "9. Escrever um programa em Python que gera os números de 1000 a 1999 e escreve aqueles\n",
+        "que divididos por 11 dão um resto igual a 5."
+      ],
+      "metadata": {
+        "id": "0U-yewdcAv7o"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Algoritmo gerarresto do números\n",
+        "\n",
+        "#inicio\n",
+        "\n",
+        "for i in range(1000,1050):\n",
+        " if i % 11 == 5:\n",
+        "\n",
+        "  print(i)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Tu2AAqHRAyvn",
+        "outputId": "c32b083b-d320-454f-8314-ba963ba6bd8d"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1006\n",
+            "1017\n",
+            "1028\n",
+            "1039\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "10. Faça um programa em Python que leia um número qualquer (N), e realize a soma dos\n",
+        "números de 1 até N. Ao final, deve-se escrever o resultado."
+      ],
+      "metadata": {
+        "id": "RGtO2nRSJQP8"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#LER_NUMERO_N\n",
+        "soma = 0\n",
+        "\n",
+        "n = int(input(\"informe um número: \"))\n",
+        "\n",
+        "for i in range(1, n + 1):\n",
+        " soma += i\n",
+        "print(soma)"
+      ],
+      "metadata": {
+        "id": "DRInVLGslEVW",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "facb8493-737f-4851-85b4-e74974c519a3"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "informe um número: 3\n",
+            "6\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "11. Faça um programa em Python para ler 10 valores inteiros. Para cada valor fornecido escreva\n",
+        "uma mensagem que indica se cada valor fornecido é PAR ou ÍMPAR."
+      ],
+      "metadata": {
+        "id": "xUhvzpWNzcyp"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#algoritmo divergencia\n",
+        "\n",
+        "#Algoritmo ler sequencia de cinco números:\n",
+        "\n",
+        "#identifique os numeros\n",
+        "\n",
+        "for i in range(1,10+1):\n",
+        " i = int(input(\"ESCREVA UM NÚMERO Inteiro: \"))\n",
+        "\n",
+        " if i % 2 == 0:\n",
+        "  print(\"Esse número é Par\")\n",
+        "\n",
+        " else:\n",
+        "  print(\"Esse número é impar\")"
+      ],
+      "metadata": {
+        "id": "tylKrYzqzhe8",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "373d0f09-e0a7-410c-ec05-580c1763727e"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "ESCREVA UM NÚMERO Inteiro: 1\n",
+            "Esse número é impar\n",
+            "ESCREVA UM NÚMERO Inteiro: 2\n",
+            "Esse número é Par\n",
+            "ESCREVA UM NÚMERO Inteiro: 3\n",
+            "Esse número é impar\n",
+            "ESCREVA UM NÚMERO Inteiro: 4\n",
+            "Esse número é Par\n",
+            "ESCREVA UM NÚMERO Inteiro: 5\n",
+            "Esse número é impar\n",
+            "ESCREVA UM NÚMERO Inteiro: 6\n",
+            "Esse número é Par\n",
+            "ESCREVA UM NÚMERO Inteiro: 7\n",
+            "Esse número é impar\n",
+            "ESCREVA UM NÚMERO Inteiro: 8\n",
+            "Esse número é Par\n",
+            "ESCREVA UM NÚMERO Inteiro: 9\n",
+            "Esse número é impar\n",
+            "ESCREVA UM NÚMERO Inteiro: 10\n",
+            "Esse número é Par\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "12. Faça um programa que leia a idade de 10 alunos, calcule e escreva a média de idade destes.\n",
+        "ALGORITMO MEDIAIDADE;\n"
+      ],
+      "metadata": {
+        "id": "5qm3sdr44b3M"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\n",
+        "#Algoritmo media_idade\n",
+        "\n",
+        "n = 0\n",
+        "media = 0\n",
+        "\n",
+        "for i in range(1,10+1):\n",
+        " n = int(input(\"Informe a idade: \"))\n",
+        " m = (n + i )/ 10\n",
+        "\n",
+        "print('A MÉDIA DAS IDADES É ',m);\n"
+      ],
+      "metadata": {
+        "id": "0saLUVkc4isT",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "009b0f3e-09fe-437f-8697-44c37c102f1f"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Informe a idade: 3\n",
+            "Informe a idade: 3\n",
+            "Informe a idade: 3\n",
+            "Informe a idade: 3\n",
+            "A MÉDIA DAS IDADES É  0.7\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "13. Faça um algoritmo que leia dois valores inteiros e escreva se eles estão em ordem crescente, decrescente ou são iguais, após isso escreva todos os valores do menor ao maior.\n",
+        "ALGORITMO ORDEMNUMEROS\n"
+      ],
+      "metadata": {
+        "id": "qkltPCNa4jIr"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "3\n",
+        "#algoritmo ordemnumeros\n",
+        "\n",
+        "#identificação dos números\n",
+        "x = int(input(\"Informe o menor valor: \"))\n",
+        "y = int(input(\"Informe o maior valor: \"))\n",
+        "\n",
+        "if x > y:\n",
+        "  print(x, \" é crescente \", y)\n",
+        "elif x == y:\n",
+        "  print(x, \" e \", y ,\" são iguais\")\n",
+        "else:\n",
+        "  print(y, \" é decrescente \", x)\n",
+        "\n",
+        "for i in range(x,y):\n",
+        "  print(i)"
+      ],
+      "metadata": {
+        "id": "WvEvkFk94lq6",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "11db4599-0eb8-45a5-94ec-a4a45960e788"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Informe o menor valor: 2\n",
+            "Informe o maior valor: 3\n",
+            "3  é decrescente que  2\n",
+            "2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "14. Escrever um programa que lê 10 valores para n, um de cada vez, todos inteiros e positivos, e para cada n lido, escreva a tabuada de 1 até n de n."
+      ],
+      "metadata": {
+        "id": "PR_0kby34oOL"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Algoritmo sequencia_de_valores!\n"
+      ],
+      "metadata": {
+        "id": "bCt_WMTh4o6D"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#\n",
+        "aux = mapa_jv[1][1]\n",
+        "mapa_jv[1][0] = mapa_jv[0][2]\n",
+        "mapa_lv[0][2] = aux\n",
+        "\n",
+        "for i in range(len(mapa_jv))\n",
+        "print()"
+      ],
+      "metadata": {
+        "id": "ydh_NZtSlzdk"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "Aula 14/04 criando conjunto de chaves"
+      ],
+      "metadata": {
+        "id": "euckXtWa3u3z"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#Criando UM DICIÓNARIO\n",
+        "\n",
+        "alunos = [{\"nome\": \"joão\", \"idade\": 20, \"curso\": \"ADS\"},\n",
+        "{\"nome\": \"maria\", \"idade\":20, \"curso\": \"ADS\"}]\n",
+        "\n",
+        "#Acessando valores\n",
+        "print(alunos[0][\"nome\"])\n",
+        "\n",
+        "#Adicionando pares chaves-valor\n",
+        "alunos [0][\"nota\"] = 9.5\n",
+        "\n",
+        "#Removendo pares chaves-valordel\n",
+        "del alunos[0] [\"idade\"]\n",
+        "\n",
+        "#Iterando sobre o dicionario\n",
+        "for aluno in alunos:\n",
+        "  for chave, valor in aluno.items():\n",
+        "   print(chave + \": \" + valor + \", \", end = '')\n",
+        "    print(\"\\n\")\n",
+        "\n",
+        "alunos = [{\"nome\": \"joão\", \"idade\": 20, \"curso\": \"ADS\"},\n",
+        "{\"nome\": \"maria\", \"idade\":20, \"curso\": \"ADS\"}]\n",
+        "\n",
+        "for i, aluno in enumerate(alunos):\n",
+        "  print(i)\n",
+        "  if aluno[\"nome\"] == \"maria\": # fazer Maria virar Mariah\n",
+        "   aluno[\"nome\"] = \"Mariah\"\n",
+        "\n",
+        "     print(aluno)"
+      ],
+      "metadata": {
+        "id": "t1WsX_pH2xJo"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
