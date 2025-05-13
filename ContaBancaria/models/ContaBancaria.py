@@ -85,5 +85,8 @@ class ContaBancaria:
                     "hora e data: ", 
                     f" {dt.tm_hour} : {dt.tm_min} : {dt.tm_sec} . {dt.tm_mday} / {dt.tm_mon} / {dt.tm_year}")
             
-   def transferencia(self):
-       
+   def transferencia(self, destinatario, valor):
+       if self.sacar (valor, destinatario, titular):
+            destinatario.depositar(valor, self.titular)
+            return True
+            return False
