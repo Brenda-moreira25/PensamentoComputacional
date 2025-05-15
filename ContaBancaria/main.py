@@ -34,8 +34,9 @@ while True:
             valor = float(input("Quanto deseja trsnferir: "))
             for conta in banco:
                     if conta.titular == titular:
-                        conta.transferencia()
-        
+                        conta.transferencia()     
+                        break                      
     elif n == "n":
         print("Operação não realizada/selecionada")
-        break
+        
+   

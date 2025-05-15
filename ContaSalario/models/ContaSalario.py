@@ -5,7 +5,7 @@ class ContaBancaria:
    Classe que implementa métodos para manipular uma conta bancária.add()
    Atributos: títular(str), saldo(float), limite(float) e histótico (lista de dicionários)
    
-   Obs.: Operações no histórico: 0-sacar, 1-depositar, 2-transferir.
+   Obs.: Operações no histórico: 0-sacar, 1-depositar.
 
    '''
    def __init__(self, titular, saldo, limite, historico):
@@ -85,9 +85,6 @@ class ContaBancaria:
                     "hora e data: ", 
                     f" {dt.tm_hour} : {dt.tm_min} : {dt.tm_sec} . {dt.tm_mday} / {dt.tm_mon} / {dt.tm_year}")
             
-   def transferencia(self, destinatario, valor):
-       if self.sacar (valor, destinatario, titular):
-            destinatario.depositar(valor, self.titular)
             return True
             return False
     
