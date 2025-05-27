@@ -12,23 +12,26 @@ class ContaBancaria:
         '''
         Construtor da classe conta bancária
         '''
-        self.titular = titular  
+        self.titular = titular
         self.saldo = saldo
         self.limite = limite
         self.historico = historico
 
-   def depositar(self, valor):
+   def depositar(self, valor, remetente = None):
         '''
         Método que realiza o deposito na conta bancária.
-
-        Entrada: valor(float)
+        Entrada: valor (float) e remetente (str).
         Return: True se a operação foi realizada com sucesso, False, se a operação não foi realizada com sucesso.
         '''
+        op = 1
+        #detecta se houve uma transferencia
+        if remetente != None:
+            op = 2
         if valor > 0:
             self.saldo += valor
-            self.historico.append({"operacao": 1,
-                                    "remetente":self.titular,
-                                     "destinatario": "",
+            self.historico.append({"operacao": op,
+                                    "remetente": remetente,
+                                     "destinatario":self.titular,
                                      "valor": valor,
                                     "saldo": self.saldo,
                                     "dataetempo":int(time.time()) })
@@ -38,18 +41,21 @@ class ContaBancaria:
             print(f"O valor {valor} é inválido!")
             return False 
         
-   def sacar(self, valor):    
+   def sacar(self, valor, destinatario = None):    
         '''
         Método que realiza o saque da conta báncaria.
-
-        Entrada: valor(float)
+        Entrada: valor (float) e destinatário (str).
         Retunr: True se a operação foi realizada com sucesso.False, se a operação não foi realizada com sucesso.
         '''
+        op = 0
+        if destinatario != None:
+            op = 2
+
         if valor <= self.saldo:
             self.saldo -= valor
             self.historico.append({"operacao": 0,
-                                    "remetente":self.titular,
-                                     "destinatario": "",
+                                    "remetente": self.titular,
+                                     "destinatario": destinatario,
                                      "valor": valor,
                                     "saldo": self.saldo,
                                     "dataetempo":int(time.time()) })
@@ -77,17 +83,32 @@ class ContaBancaria:
 
             dt = time.localtime(transacao["dataetempo"])
 
-            print("op.: ", transacao["operacao"], 
-                   "remetente: ", transacao["remetente"], 
-                    "destinatario: ",  transacao["destinatario"],
-                   "saldo: ",  transacao["saldo"],
-                    "valor: ", transacao["valor"],
-                    "hora e data: ", 
+            print("op.:", transacao["operacao"], 
+                   "remetente:", transacao["remetente"], 
+                    "destinatario:",  transacao["destinatario"],
+                   "saldo:",  transacao["saldo"],
+                    "valor:", transacao["valor"],
+                    "hora e data:", 
                     f" {dt.tm_hour} : {dt.tm_min} : {dt.tm_sec} . {dt.tm_mday} / {dt.tm_mon} / {dt.tm_year}")
             
+<<<<<<< Updated upstream
    def transferencia(self, destinatario, valor):
        if self.sacar (valor, destinatario, titular):
             destinatario.depositar(valor, self.titular)
             return True
             return False
     
+=======
+   def transferir(self,destinatario, valor):
+        '''
+        Método usado para transferir valores entre duas contas.
+        Entrada: valor (float) e objeto do destinatário (ex.: pedro)
+        Saída: Se ok -> True, Se NOK -> False.
+        '''
+        #se o saque ocorreu com sucesso
+        if self.sacar(valor, destinatario.titular):
+            # depositar na conta do destinatario informando quem enviou.
+            destinatario.depositar(valor, self.titular)
+
+     
+>>>>>>> Stashed changes
