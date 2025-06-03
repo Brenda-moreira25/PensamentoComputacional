@@ -1,10 +1,10 @@
 from .produto import produto
 
-class tipoAlimenticio:
+class tipoAlimenticio(produto):
 
-        def __init__(self, verdura, fruta, mistura, laranja: str, berinjela: str, ):
+        def __init__(self, nome: str, preco: float, laranja: str, berinjela: str, ):
                 #tirar a duvida se crio uma lista? list.append[]
-                super().__init__(self, verdura, fruta, mistura, tipoAlimenticio)
+                super().__init__(nome, preco)
                 self.__laranja = laranja
                 self.__berinjela = berinjela
         

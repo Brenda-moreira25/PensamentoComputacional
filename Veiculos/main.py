@@ -7,60 +7,24 @@ from models.carro import carro
 from models.moto import moto
 
 
-#voyage = Veiculos("BCE9D36", "Voyage",  "Volkswagen", 2018,    "Vermelho", 47793) #Classe: Veiculos
-
-#jetta_gli = CarrosCombustao("JDM9D36", "Jetta GLI",  "Volkswagen", 2025, "Vermelho", 250000, "Gasolina", 
-#                            4, 5, 2000, "AT 7", 24) #Classe: CarroCombustao
-
-#tesla_model = CarroEletrico("IJI8K0T","Tesla model 5","Tesla", 2025, 500000, 5, 4, "Branco",
-#                            65,"Lítio", 491) #Classe: CarroEletrico
-
-#fusca_eletrico = CarroConvEletr(placa = "IAA0D40", modelo = "Fusca 1600 Elétrico", marca = "Volkswagem",
-#                                ano  = 1975, cor = "Azul", combustivel  = "Gasolina", 
-#                                nPortas = 4, nAssentos = 5, nCilindrada = 1600,nCambio = "MT 4", 
-#                                nivel_combustivel = 24, nivel_bateria = 65, tipo_bateria ="Litio", valor_fipe = 25000,
-#                               autonomia  = 150 ) #Classe: CarroConvEletr
-
-
-Pepsi = caminhao(placa = "ila9880", modelo = "ford", marca = "BM",
-                       ano = 2000 , cor = "BRANCO", eficiencia_media = 5 , km_litros = 5, valor_fipe = 20000 ) #Classe: caminhao
-
-palio2010 = carro(placa = "MGY1866", modelo = "FIRE", marca = "FIAT",
-                       ano = 2010, cor = "VERMELHO", valor_fipe = 22000, eficiencia_media = 12, km_litros = 12) #Classe: carro
-
-biz = moto(placa = "XXZ5610", modelo = "FASER", marca = "HONDA",
-                       ano = 2015, cor = "PRETA", eficiencia_media = 20, 
-                       km_litros = 20, valor_fipe = 25000)#Classe: CarroConvEletr
-
-
-
-# print(jetta_gli)
-# if jetta_gli.abastecer(10):
-#     print("Abastecido com sucesso!")
-# else:
-#     print("Erro ao abastecer")
-
-# print(jetta_gli)
-# print(fusca_eletrico)
-
-
-distancia = float(input("Qual a distancia a ser percorrida?"))
-
-veiculo = input("Qual o veículo a ser utilizado?")
-
-if veiculo == "moto":
-      biz.calcular_consumo(distancia)
-      print(biz)
+def main():
+      # Criando instâncias de veículos
+      veiculo1 = CarrosCombustao("ABC1234", "Fusca", 15.0, 50.0, "Gasolina")
+      veiculo2 = CarroEletrico("XYZ5678", "Tesla Model S", 0.2, 100.0, 75.0)
+      veiculo3 = CarroConvEletr("LMN9101", "Toyota Prius", 20.0, 45.0, "Híbrido")
+      veiculo4 = caminhao("QRS2345", "Volvo FH", 8.0, 300.0, 10000)
+      veiculo5 = carro("TUV6789", "Civic", 12.0, 40.0, "Gasolina")
+      veiculo6 = moto("WXY3456", "Honda CB500F", 25.0, 15.0)
       
-elif veiculo == "caminhao":
-      caminhao.calcular_consumo(distancia)
-      print(Pepsi)
-
-else:
-      veiculo == "carro"
-      carro.calcular_consumo(distancia)
-      print(palio2010)
-
+      # Adicionando veículos a uma lista
+      lista_veiculos = [veiculo1, veiculo2, veiculo3, veiculo4, veiculo5, veiculo6]
+      
+      # Exibindo informações dos veículos
+      for veiculo in lista_veiculos:
+            print(veiculo)
+           
+if __name__ == "__main__":
+    main()  
 
 
 

@@ -9,6 +9,3 @@ except ValueError as erro:
      print(f"Erro: {erro}")
 except DistanciaNegeativa as erro:
      print (f"Erro {erro}")
-
-
-class 

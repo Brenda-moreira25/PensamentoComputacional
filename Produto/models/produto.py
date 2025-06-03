@@ -1,4 +1,5 @@
-from .produto import produto
+from .tipoAlimenticio import tipoAlimenticio
+from .tipoEletronico import tipoEletronico  
 
 class produto:
 
@@ -10,7 +11,9 @@ class produto:
 
     #Método strings de informações 
     def __str__(self):
-        infos =  f"nome: {self.__nome}\n"
+        infos = super().__str__()
+        infos += f"tv: {self.__tv}\n"
+        infos +=  f"nome: {self.__nome}\n"
         infos +=  f"preco: {self.__preco}\n"
         infos +=  f"moeda: {self.__moeda}\n"
         infos +=  f"tipoAlimenticio: {self.__tipoAlimenticio}\n"
